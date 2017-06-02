@@ -1,0 +1,28 @@
+.box{
+  display: flex;
+}
+.moviedetails{
+  box-sizing: border-box;
+  height: 89.5vh;
+  width: 30%;
+  background-color: rgba(158, 158, 158, .5);
+}
+.schedule_container{
+  position: relative;
+  width: 70%;
+  height: 89.5vh;
+  overflow-y: scroll;
+}
+.schedule{
+  width: 90%;
+  height: 250px;
+  border: 15px solid rgb(128, 128, 128);
+  background-color: rgba(85, 85, 85, 0.3);
+  border-radius: 50px;
+  margin-left: 5%;
+  margin-top: 50px;
+}
+img{
+  width: 50%;
+  margin-left: 25%;
+}
