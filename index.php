@@ -4,6 +4,12 @@
   <script src="view/admin/js/checkbox.js" charset="utf-8"></script>
 
 </head>
+<!-- <script type="text/javascript">
+    setTimeout(function () {
+     window.location.href= 'index.php'; // the redirect goes here
+
+   },5 * 60 * 1000); // 300 seconds
+</script> -->
 <style media="screen">
     .backButton{
       position: fixed;
@@ -38,4 +44,6 @@
   }
 
   require_once('view/user/home.php');
+
+  // header( "refresh:300000;url=index.php" );
 ?>

@@ -20,7 +20,7 @@ class UserController
     if (!isset($_GET['movie_id']))
       return call('pages', 'error');
 
-    $schedules = Schedule::findmovie($_GET['movie_id']);
+    $schedules = Schedule::findmovie_today($_GET['movie_id']);
     $movie = Movie::find($_GET['movie_id']);
     require_once('view/user/movie_details.php');
   }

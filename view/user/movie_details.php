@@ -59,7 +59,7 @@
       echo "<div class='no_sched_avail'><p>There are no schedules available for this movie today.</p></div>";
     }
     foreach ($schedules as $value) {
-      if($value->datescheduled === $today){
+      if($value->movie_id === $movie->movie_id){
         echo "<div class='column'>";
         echo "<a href='?controller=user&action=seats&cinema-id=". $value->cinema_id ."&schedule-id=".$value->schedule_id."'>";
         echo "<div class='time_box'>";
