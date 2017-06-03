@@ -44,8 +44,14 @@ echo "<table>";
           echo "<td><div class='cbc'><input type='checkbox' name='seats[".$x."][".$y."]' value='' disabled checked><label for='seats[".$x."][".$y."]'><div class='che'></div></label></div>";
           echo "<td>";
       }else if ($seats[$x][$y]==2) {
+          $an = $a."".$n;
+          if(array_key_exists($an,$taken)){
+          echo "<td> <input type='checkbox' name='seats[".$x."][".$y."]' value='' checked style='display:none'>";
+          echo "<td><div id='container' class='cbc' style='background-color:red;'><input type='checkbox' name='seats[".$x."][".$y."]' value='$a".$n."' disabled><label for='seats[".$x."][".$y."]'><div class='che'><p class='rc'>".$a."$n</p></div></label></div>";
+        }else{
           echo "<td> <input type='checkbox' name='seats[".$x."][".$y."]' value='' checked style='display:none'>";
           echo "<td><div id='container' class='cbc'><input type='checkbox' name='seats[".$x."][".$y."]' value='$a".$n."'><label for='seats[".$x."][".$y."]'><div class='che'><p class='rc'>".$a."$n</p></div></label></div>";
+        }
       }
     }
     $y = $y+1;

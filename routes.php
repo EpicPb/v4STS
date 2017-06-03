@@ -37,6 +37,7 @@
         require_once('model/cinema.php');
         require_once('model/layout.php');
         require_once('model/movie.php');
+        require_once('model/ticket.php');
         $controller = new UserController();
       break;
 
@@ -53,7 +54,7 @@
                         'layout' => ['listlayouts','layoutdetails','addlayout','layoutselector','submitlayout','deletelayout'],
                         'cinema' => ['listcinemas','cinemadetails','addcinema','submitcinema','deletecinema'],
                         'schedule' => ['listmenu','movie_schedule','movieschedule','',''],
-                        'user' => ['home', 'movie_display', 'movie_details','seats','checkout']);
+                        'user' => ['home', 'movie_display', 'movie_details','seats','checkout','pay']);
 
   // check that the requested controller and action are both allowed
   // if someone tries to access something else he will be redirected to the error action of the pages controller

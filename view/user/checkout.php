@@ -50,20 +50,31 @@
   </div>
 </div>
 <div class="row column column-offset-5">
+  <table style="width=400px; border 1px solid black;">
   <?php
+  echo "<form action='?controller=user&action=pay' method='post'";
   $seats = $_POST['seats'];
+  $total = 0;
+  $seatcount = 0;
   foreach ($seats as $value) {
     foreach ($value as $value2) {
       if($value2 != null){
+      $seatcount++;
+      echo "<p></p>";
       echo "<p style='color:white;'>$value2</p>";
-    }
+      echo "<p style='color:white;'>$movie->price php</p>";
+      echo "<input type='hidden' name='seatnum[$seatcount]' value='$value2'>";
+      $total += $movie->price;
     }
   }
-  echo "<p style='color:white;'>".$schedule->schedule_id."</p>";
-  echo "<p style='color:white;'>".$movie->title."</p>";
+}
+echo "<input type='hidden' name='schedule-id' value='".$_POST['schedule-id']."'>";
+echo "<input type='hidden' name='total' value='$total'>";
+echo "<input type='submit' value='Proceed'>";
+echo "</form>";
    ?>
 
 </div>
-<table style="width=400px; border 1px solid black;">
+
 
 </table>
