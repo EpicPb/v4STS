@@ -55,17 +55,4 @@
 echo $target_file . "<br>";
 
 
-// $sql = "INSERT INTO movie (title, genre, director, rating, imagename)
-// VALUES ('$title', '$genre',' $director', '$rating', '$target_file')";
-//
-// if (mysqli_query($conn, $sql)) {
-//   echo "New record created successfully";
-// } else {
-//   echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-// }
-//
-// $id = mysqli_query($conn, "SELECT 'id' FROM  'movie' WHERE 'title'='$title'");
-
-// mysqli_close($conn);
-
  ?>

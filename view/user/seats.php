@@ -1,8 +1,35 @@
 <head>
   <link rel="stylesheet" href="view/user/css/layoutstyle.css">
+  <link rel="stylesheet" href="view/admin/css/grid.css">
 </head>
-<div class="column detailcolumn layoutdetails"><center>
+<script type="text/javascript">
+  function goBack(){
+    window.history.back();
+  }
+</script>
+<div class="column detailcolumn layoutdetails bg"><center>
 <br>
+<div class="row">
+  <div class="column offset">
+    <div id='container' class="cbc sample"></div>
+  </div>
+  <div class="column">
+    <p style="color:white">Available</p>
+  </div>
+  <div class="column">
+    <div id='container' class="cbc sample red"></div>
+  </div>
+  <div class="column">
+    <p style="color:white">Unavailable</p>
+  </div>
+  <div class="column">
+    <div id='container' class="cbc sample green"></div>
+  </div>
+  <div class="column">
+    <p style="color:white">Your Seats</p>
+  </div>
+</div>
+
 <form class="" action="?controller=user&action=checkout" method="post">
 
 
@@ -65,6 +92,9 @@ echo "<input type='hidden' value='".$_GET['schedule-id']."' name='schedule-id'>"
  ?>
 
  <br>
-   <input type="submit" name="" value="Proceed to Checkout">
+   <input class='button_style' type="submit" name="" value="Proceed to Checkout">
  </form>
-</center </div>
+</center> </div>
+<button onclick="goBack()"><div class="backButton">
+BACK
+</div></button>

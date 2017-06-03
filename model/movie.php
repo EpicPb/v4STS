@@ -69,6 +69,13 @@
       $req = $db->query("INSERT INTO `movie`(`title`, `genre`, `director`, `rating`, `imagename`, `description`, `length_in_min`, `release_date`,`price` )
                         VALUES ('$title', '$genre', '$director', '$rating', '$target_file', '$description', '$length_in_min', '$release_date', '$price')");
     }
+    public static function delete($movie_id)
+    {
+      $db = Db::getInstance();
+      $req = $db->prepare("DELETE FROM `movie` WHERE movie_id =:movie_id");
+      $req->execute(array('movie_id' => $movie_id));
+      
+    }
 
   }
 ?>

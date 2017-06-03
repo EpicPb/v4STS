@@ -6,6 +6,10 @@ body{
   background-color: rgb(246, 246, 246);
   /*background-color: rgb(41, 43, 93);*/
 }
+.logoName{
+  font-size: 32px;
+  color:white;
+}
 .nav{
   width: 150px;
   height: 100vh;

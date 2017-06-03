@@ -1,0 +1,56 @@
+.movie_col{
+  height: 83.97%;
+  width: 20%;
+  background-color: rgba(255, 255, 255, 0.10);
+}
+.movie_poster{
+  margin-left: 10%;
+  margin-top: 20px;
+  width: 80%;
+}
+p{
+  font-family: sans-serif;
+    color:white;
+}
+table{
+  width: 80%;
+  margin-left: 10%;
+  border: 2px solid rgba(255, 255, 255, 0.47);
+  padding-bottom:
+}
+.movietitle{
+  font-weight: bold;
+}
+.details{
+  font-size: 12px;
+}
+
+.schedule_col{
+  height: 83.97%;
+  width: 78%;
+  background-color: rgba(255, 255, 255, 0.10);
+}
+.time_box{
+  color: white;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 5px;
+  width: 110px;
+  height: 50px;
+  background-color: rgba(15, 93, 88, 0.85);
+  border: 2px solid rgb(15, 93, 88);
+  margin: 10px 0px 10px 0px;
+}
+.column + .column{
+  margin-left: 1%;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+.no_sched_avail{
+  padding-top: 50px;
+  text-align: center;
+  height: 100%;
+  font-size: 32px;
+}

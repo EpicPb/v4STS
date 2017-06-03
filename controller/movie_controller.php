@@ -45,5 +45,12 @@
       }
 
     }
+    public function deletemovie(){
+      MovieController::listmovies();
+      if (!isset($_GET['movie_id']))
+        return call('pages', 'error');
+
+      Movie::delete($_GET['movie_id']);
+    }
   }
 ?>

@@ -15,7 +15,9 @@
   <div class="row">
       <div class="cute-12-laptop">
       <div class="cute-9-laptop">
-        <p style="font-size: 35px; color: white;"> STS THEATERS</p>
+        	<img src="resources/icons/logo3.png" alt="" height="85px" style="margin:2.5px 0px 0px 0px;">
+
+					<!-- <p style="font-size: 35px; color: white;"> STS CINEMAS</p> -->
       </div>
       <div class="cute-3-laptop">
         <!-- <form id="searchthis" action="/search" style="display:inline;" method="get"> -->
@@ -34,6 +36,7 @@
 
 
 </div>
+
 
 	</body>
 </html>

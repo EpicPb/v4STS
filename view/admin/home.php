@@ -12,7 +12,7 @@
 	<body>
 		<div class="column nav">
 			<div class="navtop">
-
+				<img src="resources/icons/logo.png" alt="" height="45px" style="margin:2.5px 0px 0px 70px;">
 			</div>
 			<a href='?controller=layout&action=listlayouts'>
 				<div class="navitem">
@@ -37,7 +37,7 @@
 		</div>
 		<div class="content">
 			<div class="navtop">
-
+				<p class="logoName">STS CINEMAS</p>
 			</div>
 			<div class="">
 				<?php

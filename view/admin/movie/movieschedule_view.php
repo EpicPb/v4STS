@@ -41,6 +41,11 @@
     $('.ajaxbox').load('view/admin/movie/addschedule_movie.php',{cinemanum: cinemanum, starttime:starttime, addtimeID:addtimeID,movieid:movieid},function(){}).hide().fadeIn(500);
     $('.addtimeform').fadeOut();
   }
+  // function getrepeat(){
+  //   if(document.getElementsByName('repeat').checked){
+  //
+  //   }
+  // }
 
 
 </script>
@@ -133,6 +138,10 @@ if(mysqli_num_rows($result) > 0){
           <div class="drow cn"><input type="number" name="cinemanum_day" value="" style="width:70px;"></div>
           <div class="drow time"><input type="time" name="time_day" value=""></div>
         </div>
+        <!-- <div class="layout-row">
+          <div class="drow cn">Repeat:<input type="checkbox" name="repeat" value="" style='border:none'></div>
+          <div class="drow time"><input type="date" name="until" value=""></div>
+        </div> -->
         <div class="dateheader dh-1">
           <input type="submit" name="" value="Submit"><br>
         </div>

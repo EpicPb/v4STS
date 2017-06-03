@@ -61,6 +61,41 @@ p{
   z-index: -1;
   text-align: center;
 
-
-
+}
+.bg{
+  width: 80%;
+  height: 80%;
+  background-color: rgba(255, 255, 255, 0.10);
+  margin: 1% 0% 0% 10%;
+}
+.sample{
+  width: 15px;
+  height: 15px;
+}
+.red{
+  background-color: red;
+}
+.green{
+  background-color: rgb(8, 252, 32);
+}
+.offset{
+  margin-left: 35%;
+  margin-bottom: 40px;
+}
+.button_style{
+  border: 2px solid #555555;
+  background-color: rgb(80, 80, 80);
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.button_style:hover{
+  background-color:  rgba(80, 80, 80, .5);
 }

@@ -5,6 +5,12 @@
   function getschedule(data){
     $(".ajaxbox").load('view/admin/movie/movieschedule_view.php',{movieid:data},function(){}).hide().fadeIn();
   }
+  function confirm_delete(data){
+      if(confirm("Are you sure you want to delete this movie? This action cannot be undone.")){
+        console.log('?controller=movie&action=delete&movie_id='+data);
+        window.location.href ='?controller=movie&action=deletemovie&movie_id='+data;
+      }
+  }
 </script>
 
 <div class="column detailcolumn moviedetails">
@@ -34,9 +40,9 @@
     <a class="moviebuttons" href="#" onclick="javascript:getschedule(<?php echo $movie->movie_id;?>);">
         See Schedule
     </a>
-    <a class="moviebuttons delete" href="#">
+    <div class="moviebuttons delete" href="" onclick="confirm_delete(<?php echo $movie->movie_id;?>)">
         Delete Movie
-    </a>
+    </div>
   </div>
   <div class="ajaxbox layout-column">
 

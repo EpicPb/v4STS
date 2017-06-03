@@ -31,6 +31,19 @@
       return $list;
     }
 
+    public static function all_grp_movie() {
+      $list = [];
+      $db = Db::getInstance();
+      $req = $db->query('SELECT * FROM (SELECT * FROM schedule WHERE datescheduled = DATE(NOW()))AS sub GROUP BY fk_movie_id' );
+
+      // we create a list of Post objects from the database results
+      foreach($req->fetchAll() as $schedule) {
+        $list[] = new Schedule($schedule['schedule_id'],$schedule['fk_movie_id'],$schedule['fk_cinema_id'],$schedule['datescheduled'],$schedule['starttime'],$schedule['endtime']);
+      }
+
+      return $list;
+    }
+
     public static function find($schedule_id) {
       $db = Db::getInstance();
       // we make sure $id is an integer
@@ -47,7 +60,7 @@
       $db = Db::getInstance();
       // we make sure $id is an integer
       $movie_id = intval($movie_id);
-      $req = $db->prepare('SELECT * FROM schedule WHERE fk_movie_id = :fk_movie_id');
+      $req = $db->prepare('SELECT * FROM schedule WHERE fk_movie_id = :fk_movie_id ORDER BY fk_cinema_id');
       // the query was prepared, now we replace :id with our actual $id value
       $req->execute(array('fk_movie_id' => $movie_id));
 

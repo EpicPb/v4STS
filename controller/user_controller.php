@@ -11,6 +11,7 @@ class UserController
   }
   function movie_display()
   {
+    $schedules = Schedule::all_grp_movie();
     $movies = Movie::all();
     require_once('view/user/movie_display.php');
   }

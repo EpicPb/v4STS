@@ -2,12 +2,34 @@
   <link rel="stylesheet" href="view/admin/css/moviedetails.css">
   <link rel="stylesheet" href="view/admin/css/grid.css">
 </head>
+<script type="text/javascript">
+  function goBack(){
+    window.history.back();
+  }
+</script>
 <style media="screen">
   .movieheader{
     background-color: rgba(125, 125, 125, 0.21);
   }
   .movietitle{
     color: white;
+  }
+  .button_style{
+    border: 2px solid #555555;
+    background-color: rgb(80, 80, 80);
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  .button_style:hover{
+    background-color:  rgba(80, 80, 80, .5);
   }
 </style>
 <div class="movieheader ">
@@ -70,11 +92,15 @@
 }
 echo "<input type='hidden' name='schedule-id' value='".$_POST['schedule-id']."'>";
 echo "<input type='hidden' name='total' value='$total'>";
-echo "<input type='submit' value='Proceed'>";
+echo "<input class='button_style'type='submit' value='Proceed'>";
 echo "</form>";
    ?>
 
 </div>
 
 
+
 </table>
+<button onclick="goBack()"><div class="backButton">
+BACK
+</div></button>

@@ -49,8 +49,8 @@
 
   // just a list of the controllers we have and their actions
   // we consider those "allowed" values
-  $controllers = array('admin' => ['home', 'movie', 'cinema', 'layout', 'schedule', 'error'],
-                        'movie' => ['listmovies','moviedetails', 'addmovie','submitmovie'],
+  $controllers = array('admin' => ['home','error'],
+                        'movie' => ['listmovies','moviedetails', 'addmovie','submitmovie','deletemovie'],
                         'layout' => ['listlayouts','layoutdetails','addlayout','layoutselector','submitlayout','deletelayout'],
                         'cinema' => ['listcinemas','cinemadetails','addcinema','submitcinema','deletecinema'],
                         'schedule' => ['listmenu','movie_schedule','movieschedule','',''],

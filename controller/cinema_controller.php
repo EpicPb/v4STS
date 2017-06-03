@@ -25,7 +25,6 @@
       require_once('model/layout.php');
       $layouts = Layout::all();
       require_once('view/admin/cinema/addcinema.php');
-
     }
     public function submitcinema()
     {
